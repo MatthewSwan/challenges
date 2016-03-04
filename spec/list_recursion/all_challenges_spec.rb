@@ -56,6 +56,8 @@ RSpec.describe 'list recursion' do
           assert_equal NormalNode, nil_node.insert(0, 'abc').class
         end
         specify 'with the inserted data' do
+          require "pry"
+          binding.pry
           assert_equal 'abc', nil_node.insert(0, 'abc').data
         end
         specify 'whose link is a nilnode' do
