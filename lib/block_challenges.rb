@@ -120,8 +120,6 @@ def yield_with_each(array, &block)
   if array == []
     array
   else
-    result = []
-    array.each { |index| result << index }
-    result
+    array.each { |index| block.call(index) }
   end
 end
